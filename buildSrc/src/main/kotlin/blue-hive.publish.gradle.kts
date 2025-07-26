@@ -27,9 +27,9 @@ configure<PublishingExtension> {
                 }
 
                 scm {
-                    connection.set("scm:git:git://github.com/stainless-sdks/bluehive-java.git")
-                    developerConnection.set("scm:git:git://github.com/stainless-sdks/bluehive-java.git")
-                    url.set("https://github.com/stainless-sdks/bluehive-java")
+                    connection.set("scm:git:git://github.com/bluehive-health/bluehive-sdk-java.git")
+                    developerConnection.set("scm:git:git://github.com/bluehive-health/bluehive-sdk-java.git")
+                    url.set("https://github.com/bluehive-health/bluehive-sdk-java")
                 }
 
                 versionMapping {
