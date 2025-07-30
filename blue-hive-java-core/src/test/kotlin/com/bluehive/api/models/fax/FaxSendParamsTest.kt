@@ -3,12 +3,10 @@
 package com.bluehive.api.models.fax
 
 import org.assertj.core.api.Assertions.assertThat
-import org.junit.jupiter.api.Disabled
 import org.junit.jupiter.api.Test
 
 internal class FaxSendParamsTest {
 
-    @Disabled("skipped: tests are disabled for the time being")
     @Test
     fun create() {
         FaxSendParams.builder()
@@ -26,7 +24,6 @@ internal class FaxSendParamsTest {
             .build()
     }
 
-    @Disabled("skipped: tests are disabled for the time being")
     @Test
     fun body() {
         val params =
@@ -60,7 +57,6 @@ internal class FaxSendParamsTest {
         assertThat(body.subject()).contains("subject")
     }
 
-    @Disabled("skipped: tests are disabled for the time being")
     @Test
     fun bodyWithoutOptionalFields() {
         val params =
