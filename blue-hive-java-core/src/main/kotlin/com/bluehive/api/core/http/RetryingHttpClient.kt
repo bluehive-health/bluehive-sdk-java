@@ -3,6 +3,7 @@ package com.bluehive.api.core.http
 import com.bluehive.api.core.RequestOptions
 import com.bluehive.api.core.checkRequired
 import com.bluehive.api.errors.BlueHiveIoException
+import com.bluehive.api.errors.BlueHiveRetryableException
 import java.io.IOException
 import java.time.Clock
 import java.time.Duration
@@ -176,9 +177,10 @@ private constructor(
     }
 
     private fun shouldRetry(throwable: Throwable): Boolean =
-        // Only retry IOException and BlueHiveIoException, other exceptions are not intended to be
-        // retried.
-        throwable is IOException || throwable is BlueHiveIoException
+        // Only retry known retryable exceptions, other exceptions are not intended to be retried.
+        throwable is IOException ||
+            throwable is BlueHiveIoException ||
+            throwable is BlueHiveRetryableException
 
     private fun getRetryBackoffDuration(retries: Int, response: HttpResponse?): Duration {
         // About the Retry-After header:
