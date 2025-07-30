@@ -219,6 +219,8 @@ The SDK throws custom unchecked exception types:
 
 - [`BlueHiveIoException`](blue-hive-java-core/src/main/kotlin/com/bluehive/api/errors/BlueHiveIoException.kt): I/O networking errors.
 
+- [`BlueHiveRetryableException`](blue-hive-java-core/src/main/kotlin/com/bluehive/api/errors/BlueHiveRetryableException.kt): Generic error indicating a failure that could be retried by the client.
+
 - [`BlueHiveInvalidDataException`](blue-hive-java-core/src/main/kotlin/com/bluehive/api/errors/BlueHiveInvalidDataException.kt): Failure to interpret successfully parsed data. For example, when accessing a property that's supposed to be required, but the API unexpectedly omitted it from the response.
 
 - [`BlueHiveException`](blue-hive-java-core/src/main/kotlin/com/bluehive/api/errors/BlueHiveException.kt): Base class for all exceptions. Most errors will result in one of the previously mentioned ones, but completely generic errors may be thrown using the base class.
