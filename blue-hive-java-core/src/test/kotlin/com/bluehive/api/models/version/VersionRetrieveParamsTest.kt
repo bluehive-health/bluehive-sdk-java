@@ -2,12 +2,10 @@
 
 package com.bluehive.api.models.version
 
-import org.junit.jupiter.api.Disabled
 import org.junit.jupiter.api.Test
 
 internal class VersionRetrieveParamsTest {
 
-    @Disabled("skipped: tests are disabled for the time being")
     @Test
     fun create() {
         VersionRetrieveParams.builder().build()
