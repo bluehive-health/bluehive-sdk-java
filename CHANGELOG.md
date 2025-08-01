@@ -1,5 +1,14 @@
 # Changelog
 
+## 0.1.0-alpha.2 (2025-08-01)
+
+Full Changelog: [v0.1.0-alpha.1...v0.1.0-alpha.2](https://github.com/bluehive-health/bluehive-sdk-java/compare/v0.1.0-alpha.1...v0.1.0-alpha.2)
+
+### Chores
+
+* **internal:** bump ci test timeout ([e700d43](https://github.com/bluehive-health/bluehive-sdk-java/commit/e700d4341676fca6b2910271f86be11e29b251a2))
+* **internal:** reduce proguard ci logging ([1bf0f5b](https://github.com/bluehive-health/bluehive-sdk-java/commit/1bf0f5b4d2b07cf9e43857995d00f86eeea530b4))
+
 ## 0.1.0-alpha.1 (2025-08-01)
 
 Full Changelog: [v0.0.1-alpha.0...v0.1.0-alpha.1](https://github.com/bluehive-health/bluehive-sdk-java/compare/v0.0.1-alpha.0...v0.1.0-alpha.1)
