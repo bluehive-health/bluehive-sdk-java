@@ -18,7 +18,7 @@ tasks.withType<JavaCompile>().configureEach {
 
 application {
     // Use `./gradlew :blue-hive-java-example:run` to run `Main`
-    // Use `./gradlew :blue-hive-java-example:run -Dexample=Something` to run `SomethingExample`
+    // Use `./gradlew :blue-hive-java-example:run -Pexample=Something` to run `SomethingExample`
     mainClass = "com.bluehive.api.example.${
         if (project.hasProperty("example"))
             "${project.property("example")}Example"
