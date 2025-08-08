@@ -1,5 +1,17 @@
 # Changelog
 
+## 0.1.0-alpha.2 (2025-08-08)
+
+Full Changelog: [v0.1.0-alpha.1...v0.1.0-alpha.2](https://github.com/bluehive-health/bluehive-sdk-java/compare/v0.1.0-alpha.1...v0.1.0-alpha.2)
+
+### Chores
+
+* **example:** fix run example comment ([5a4997e](https://github.com/bluehive-health/bluehive-sdk-java/commit/5a4997e8a093a4b2fa6635147e7a7faa25e3fe41))
+* increase max gradle JVM heap to 8GB ([ef6fdb3](https://github.com/bluehive-health/bluehive-sdk-java/commit/ef6fdb3a1871db154b0e1bc3f2fd433db61ca080))
+* **internal:** add async lock helper ([6f173a9](https://github.com/bluehive-health/bluehive-sdk-java/commit/6f173a9df4a790709b4151f66092e1c89460941c))
+* **internal:** bump ci test timeout ([e700d43](https://github.com/bluehive-health/bluehive-sdk-java/commit/e700d4341676fca6b2910271f86be11e29b251a2))
+* **internal:** reduce proguard ci logging ([1bf0f5b](https://github.com/bluehive-health/bluehive-sdk-java/commit/1bf0f5b4d2b07cf9e43857995d00f86eeea530b4))
+
 ## 0.1.0-alpha.1 (2025-08-01)
 
 Full Changelog: [v0.0.1-alpha.0...v0.1.0-alpha.1](https://github.com/bluehive-health/bluehive-sdk-java/compare/v0.0.1-alpha.0...v0.1.0-alpha.1)
