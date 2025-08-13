@@ -794,12 +794,39 @@ private constructor(
                 return true
             }
 
-            return /* spotless:off */ other is Provider && address1 == other.address1 && address2 == other.address2 && city == other.city && country == other.country && distance == other.distance && faxNumber == other.faxNumber && firstname == other.firstname && lastname == other.lastname && npi == other.npi && postalCode == other.postalCode && stateProvince == other.stateProvince && workPhone == other.workPhone && additionalProperties == other.additionalProperties /* spotless:on */
+            return other is Provider &&
+                address1 == other.address1 &&
+                address2 == other.address2 &&
+                city == other.city &&
+                country == other.country &&
+                distance == other.distance &&
+                faxNumber == other.faxNumber &&
+                firstname == other.firstname &&
+                lastname == other.lastname &&
+                npi == other.npi &&
+                postalCode == other.postalCode &&
+                stateProvince == other.stateProvince &&
+                workPhone == other.workPhone &&
+                additionalProperties == other.additionalProperties
         }
 
-        /* spotless:off */
-        private val hashCode: Int by lazy { Objects.hash(address1, address2, city, country, distance, faxNumber, firstname, lastname, npi, postalCode, stateProvince, workPhone, additionalProperties) }
-        /* spotless:on */
+        private val hashCode: Int by lazy {
+            Objects.hash(
+                address1,
+                address2,
+                city,
+                country,
+                distance,
+                faxNumber,
+                firstname,
+                lastname,
+                npi,
+                postalCode,
+                stateProvince,
+                workPhone,
+                additionalProperties,
+            )
+        }
 
         override fun hashCode(): Int = hashCode
 
@@ -812,12 +839,13 @@ private constructor(
             return true
         }
 
-        return /* spotless:off */ other is ProviderLookupResponse && count == other.count && providers == other.providers && additionalProperties == other.additionalProperties /* spotless:on */
+        return other is ProviderLookupResponse &&
+            count == other.count &&
+            providers == other.providers &&
+            additionalProperties == other.additionalProperties
     }
 
-    /* spotless:off */
     private val hashCode: Int by lazy { Objects.hash(count, providers, additionalProperties) }
-    /* spotless:on */
 
     override fun hashCode(): Int = hashCode
 

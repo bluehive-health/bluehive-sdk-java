@@ -224,10 +224,17 @@ private constructor(
             return true
         }
 
-        return /* spotless:off */ other is ProviderLookupParams && firstname == other.firstname && lastname == other.lastname && npi == other.npi && zipcode == other.zipcode && additionalHeaders == other.additionalHeaders && additionalQueryParams == other.additionalQueryParams /* spotless:on */
+        return other is ProviderLookupParams &&
+            firstname == other.firstname &&
+            lastname == other.lastname &&
+            npi == other.npi &&
+            zipcode == other.zipcode &&
+            additionalHeaders == other.additionalHeaders &&
+            additionalQueryParams == other.additionalQueryParams
     }
 
-    override fun hashCode(): Int = /* spotless:off */ Objects.hash(firstname, lastname, npi, zipcode, additionalHeaders, additionalQueryParams) /* spotless:on */
+    override fun hashCode(): Int =
+        Objects.hash(firstname, lastname, npi, zipcode, additionalHeaders, additionalQueryParams)
 
     override fun toString() =
         "ProviderLookupParams{firstname=$firstname, lastname=$lastname, npi=$npi, zipcode=$zipcode, additionalHeaders=$additionalHeaders, additionalQueryParams=$additionalQueryParams}"
