@@ -635,12 +635,18 @@ private constructor(
                 return true
             }
 
-            return /* spotless:off */ other is Body && document == other.document && to == other.to && from == other.from && provider == other.provider && subject == other.subject && additionalProperties == other.additionalProperties /* spotless:on */
+            return other is Body &&
+                document == other.document &&
+                to == other.to &&
+                from == other.from &&
+                provider == other.provider &&
+                subject == other.subject &&
+                additionalProperties == other.additionalProperties
         }
 
-        /* spotless:off */
-        private val hashCode: Int by lazy { Objects.hash(document, to, from, provider, subject, additionalProperties) }
-        /* spotless:on */
+        private val hashCode: Int by lazy {
+            Objects.hash(document, to, from, provider, subject, additionalProperties)
+        }
 
         override fun hashCode(): Int = hashCode
 
@@ -1020,7 +1026,7 @@ private constructor(
                     return true
                 }
 
-                return /* spotless:off */ other is ContentType && value == other.value /* spotless:on */
+                return other is ContentType && value == other.value
             }
 
             override fun hashCode() = value.hashCode()
@@ -1033,12 +1039,16 @@ private constructor(
                 return true
             }
 
-            return /* spotless:off */ other is Document && content == other.content && contentType == other.contentType && filename == other.filename && additionalProperties == other.additionalProperties /* spotless:on */
+            return other is Document &&
+                content == other.content &&
+                contentType == other.contentType &&
+                filename == other.filename &&
+                additionalProperties == other.additionalProperties
         }
 
-        /* spotless:off */
-        private val hashCode: Int by lazy { Objects.hash(content, contentType, filename, additionalProperties) }
-        /* spotless:on */
+        private val hashCode: Int by lazy {
+            Objects.hash(content, contentType, filename, additionalProperties)
+        }
 
         override fun hashCode(): Int = hashCode
 
@@ -1051,10 +1061,13 @@ private constructor(
             return true
         }
 
-        return /* spotless:off */ other is FaxSendParams && body == other.body && additionalHeaders == other.additionalHeaders && additionalQueryParams == other.additionalQueryParams /* spotless:on */
+        return other is FaxSendParams &&
+            body == other.body &&
+            additionalHeaders == other.additionalHeaders &&
+            additionalQueryParams == other.additionalQueryParams
     }
 
-    override fun hashCode(): Int = /* spotless:off */ Objects.hash(body, additionalHeaders, additionalQueryParams) /* spotless:on */
+    override fun hashCode(): Int = Objects.hash(body, additionalHeaders, additionalQueryParams)
 
     override fun toString() =
         "FaxSendParams{body=$body, additionalHeaders=$additionalHeaders, additionalQueryParams=$additionalQueryParams}"

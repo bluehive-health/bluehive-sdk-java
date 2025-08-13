@@ -526,7 +526,7 @@ private constructor(
                 return true
             }
 
-            return /* spotless:off */ other is Status && value == other.value /* spotless:on */
+            return other is Status && value == other.value
         }
 
         override fun hashCode() = value.hashCode()
@@ -539,12 +539,29 @@ private constructor(
             return true
         }
 
-        return /* spotless:off */ other is FaxSendResponse && id == other.id && createdAt == other.createdAt && from == other.from && provider == other.provider && status == other.status && to == other.to && estimatedDelivery == other.estimatedDelivery && additionalProperties == other.additionalProperties /* spotless:on */
+        return other is FaxSendResponse &&
+            id == other.id &&
+            createdAt == other.createdAt &&
+            from == other.from &&
+            provider == other.provider &&
+            status == other.status &&
+            to == other.to &&
+            estimatedDelivery == other.estimatedDelivery &&
+            additionalProperties == other.additionalProperties
     }
 
-    /* spotless:off */
-    private val hashCode: Int by lazy { Objects.hash(id, createdAt, from, provider, status, to, estimatedDelivery, additionalProperties) }
-    /* spotless:on */
+    private val hashCode: Int by lazy {
+        Objects.hash(
+            id,
+            createdAt,
+            from,
+            provider,
+            status,
+            to,
+            estimatedDelivery,
+            additionalProperties,
+        )
+    }
 
     override fun hashCode(): Int = hashCode
 
